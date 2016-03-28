@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>Good morning!</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<script>
+        $(document).ready(function(){
+            $('.blockList h4').on('mouseenter', function(event) {
+                var temp = $(this).parent().find('.collection');
+                temp.fadeIn('fast');
+            });
+            $('.bmList .blockList').on('mouseleave', function(event) {
+                var temp = $(this).find('.collection');
+                temp.fadeOut('fast');
+            });
+            $.simpleWeather({
+                location: 'Kyiv, Ukraine',
+                woeid: '',
+                unit: 'c',
+                success: function(weather) {
+                    html = '<h4>' + weather.city +', ' + weather.country + '</h4>' + 
+                      '<h1>'+weather.temp+'&deg;'+weather.units.temp+'</h1><br><p>' +
+                      weather.text + '</p>';
+
+                    $("#location").html(weather.city +', ' + weather.country);
+                    $("#degrees").html(weather.temp+'&deg;'+weather.units.temp);
+                    $("#text").html(weather.text);
+                    $("#time").html(weather.forecast[0].date);
+                },
+                error: function(error) {
+                  $("#weather").html('<p>'+error+'</p>');
+                }
+              });
+        });
+    </script>
+	<body style="background: url(fon1.png) no-repeat; background-size: cover">
+        <div class="header">
+            <div style="text-align: left; padding: 0 40px">
+                <p id="location"></p>
+                <p id="text"></p>
+                <p id="degrees"></p>
+                <p id="time"></p>
+            </div>
+            <div>
+                <h4>Welcome home</h4>
+                <h1>Bogdan</h1>
+            </div>
+            <div style="text-align: right;padding: 0 40px"></div>
+        </div>
+        <div class="main">
+            <div class="search">
+                <input type="text">
+            </div>
+            
+        </div>
+        <div class="bmList">
+                <div class='blockList'>
+                    <div class='collection'>
+                        <a href="#">Reddit</a><br>
+                        <a href="#">Shazoo</a><br>
+                        <a href="#">Rutracker</a><br>
+                    </div>
+                    <h4>forums</h4>
+                </div>
+                <div class='blockList'>
+                    <div class='collection'>
+                        <a href="#">Vk</a><br>
+                        <a href="#">Twitter</a><br>
+                        <a href="#">Facebook</a><br>
+                    </div>
+                    <h4>social networks</h4>
+                </div>
+                <div class='blockList'>
+                    <div class='collection'>
+                        <a href="#">GitHub</a><br>
+                        <a href="#">GitHub</a><br>
+                        <a href="#">GitHub</a><br>
+                        <a href="#">GitHub</a><br>
+                        <a href="#">GitHub</a><br>
+                    </div>
+                    <h4>education</h4>
+                </div>
+            </div>
+        <!--
+        <div id="all">
+            <div class="menu">
+                <table>
+                    <tr>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                    </tr>
+                    <tr>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                    </tr>
+                    <tr>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                        <td>dsd</td>
+                    </tr>
+                </table><br>
+            </div>
+            <div class="block">
+            <br>
+            </div>
+        </div>-->
+	</body>
+</html>
