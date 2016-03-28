@@ -48,32 +48,34 @@ h4{
 }
 
 .bmList{
+    height:200px;
     display: flex;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100%;   
 }
 
-.bmList .blockList{
-    height: 50px;
+.blockList{
     flex: 1;
+}
+
+.blockList ul{
+    border-left: solid whitesmoke 1px;
+    margin: 0 auto;
+    padding: 0 0px 0 15px;
+    display:inline-block;
+    max-height: 35px;
+    overflow-y: hidden;
     transition: 0.5s;
 }
 
-.bmList .blockList h4{
-    position: absolute;
-    bottom: 10px;
-    width: 200px;
-    
+.blockList ul li:first-child{
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.bmList .blockList:hover{
-    height: 250px;
-}
-
-.collection{
-    width: 100%;
-    display: none;
+.blockList ul:hover{
+    max-height: 200px;
 }
 
 a{
@@ -101,6 +103,11 @@ a{
     font-size: 12pt;
 }
 
-#time{
+#date{
     font-size: 15pt;
+}
+
+#clock{
+    font-size: 50pt;
+    margin:0;
 }
