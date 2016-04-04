@@ -4,12 +4,13 @@
 	<title>Have a nice day!</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script type="text/javascript" src="index.js"></script>
+	<meta charset="UTF-8">
 </head>
-<body onload="initial();">
+<body onload="initial()">
 	<div class="main">
 	<div class="background"></div>
 		<div class="menu">
-			<input type="text" placeholder="Search..." id="search" onkeydown="if (event.keyCode == 13){window.location.replace('http://www.google.com/#q=' + this.value);}"><br><br><br>
+			<input type="text" placeholder="Search..." id="search" onkeydown="search(event, this.value)"><br><br><br>
 			<ul>
 				<li>FORUMS</li>
 				<li><a href="https://www.reddit.com/">reddit</a></li>

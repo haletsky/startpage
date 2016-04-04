@@ -21,6 +21,10 @@ function initial(){
 	},20);
 }
 
+function search(event, value){
+	if (event.keyCode == 13){ window.location.replace('http://www.google.com/#q=' + value); }
+}
+
 setInterval(function(){
     var date = new Date();
     var hours = date.getHours() < 10 ? '0'+date.getHours() : date.getHours();
