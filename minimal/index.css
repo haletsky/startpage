@@ -1,0 +1,108 @@
+.main{
+	border: solid rgba(255,255,255, 0.5) 2px;
+	display: inline-block;
+	position: relative;
+	box-shadow: 0 0 0 5px rgba(30,30,30,0.5);
+	margin: auto;
+}
+
+.background{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width:100%;
+	height: 100%;
+	background-color: inherit;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+body{
+	opacity: 0;
+	background-color: black;
+	font-family: monospace;
+	font-size: 12pt;
+}
+
+.main img{
+	height: 400px;
+	width:349px;
+	float:right;
+}
+
+.menu{
+	padding: 25px 25px 0 25px;
+	display: inline-block;
+}
+
+.menu ul{
+	padding: 0 15px 0 0;
+	list-style-type: none;
+	display: inline-block;
+}
+
+.menu ul li:first-child{
+	color: white;
+	opacity: 0.5
+}
+
+.menu ul li{
+	margin-bottom: 15px;
+	width: 100%;
+	height: 100%;
+}
+
+.menu ul li a{
+	display: block;
+	width: 100%;
+	color: #F2F1F5;
+	text-decoration: none;
+	padding: 5px 5px;
+	border-left: solid 2px transparent;
+	transition: 0.2s;
+}
+
+.menu ul li:hover a{
+	border-color: #F2F1F5;
+	background-color: rgba(30,30,30, 0.25);
+}
+
+h2{
+	color: #F2F1F5;
+	opacity: 0.5;
+}
+
+.block{
+	position: absolute;
+	bottom: 0;
+	margin: 25px;
+	color: white;
+	opacity: 0.5;
+}
+
+#clock{
+	display: inline-block;
+	font-family: monospace;
+	margin: 0;
+}
+
+#search{
+	background-color: transparent;
+	border: 0;
+	border-bottom: solid transparent 2px;
+	font-size: 11pt;
+	color: #F2F1F5;
+	font-family: monospace;
+	width: 20%;
+	transition: 0.2s;
+}
+
+#search:focus{
+	outline: none;
+	width: 50%;
+	border-color: #F2F1F5;
+}
+
+#search::-webkit-input-placeholder{
+	color: white;
+}
