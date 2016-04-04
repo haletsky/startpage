@@ -17,6 +17,7 @@
 	position: relative;
 	box-shadow: 0 0 0 5px rgba(30,30,30,0.5);
 	margin: auto;
+	height: 400px;
 }
 
 .background{
@@ -44,29 +45,39 @@ body{
 }
 
 .menu{
-	padding: 25px 25px 0 25px;
+	padding: 25px;
+	min-width: 300px;
 	display: inline-block;
 }
 
-.menu ul{
-	padding: 0 25px 0 0;
+ul{
+	display: inline-block;
+	padding: 0;
 	list-style-type: none;
-	display: inline-block;
+	margin: 0 20px;
 }
 
-.menu ul li:first-child{
+.bookmarks ul:first-child{
+	margin-left: 0;
+}
+
+.bookmarks ul:last-child{
+	margin-right: 0;
+}
+
+ul li:first-child{
 	color: white;
 	opacity: 0.5;
 	font-weight: bold;
 }
 
-.menu ul li{
-	margin-bottom: 15px;
+ul li{
+	margin-bottom: 5px;
 	width: 100%;
 	height: 100%;
 }
 
-.menu ul li a{
+ul li a{
 	display: block;
 	width: 100%;
 	color: #F2F1F5;
@@ -76,7 +87,7 @@ body{
 	transition: 0.2s;
 }
 
-.menu ul li:hover a{
+ ul li:hover a{
 	border-color: #F2F1F5;
 	background-color: rgba(30,30,30, 0.25);
 }
@@ -86,37 +97,80 @@ h2{
 	opacity: 0.5;
 }
 
-.block{
-	position: absolute;
-	bottom: 0;
-	margin: 25px;
-	color: white;
-	opacity: 0.5;
+.header{
+	height: 75px;
 }
 
 #clock{
 	display: inline-block;
 	margin: 0;
+	float:right;
+	color: white;
+	opacity: 0.5;
 }
 
-#search{
+#welcome{
+	float: left;
+	display: inline-block;
+	color: white;
+	opacity: 0.5;
+	margin: 0;
+}
+
+
+input{
 	background-color: transparent;
 	border: 0;
 	border-bottom: solid transparent 2px;
 	font-size: 10pt;
 	color: #F2F1F5;
 	font-family: inherit;
-	width: 20%;
+	width: 30%;
 	transition: 0.2s;
 }
 
-#search:focus{
+input:focus{
 	outline: none;
-	width: 50%;
+	width: 60%;
 	border-color: #F2F1F5;
 }
 
-#search::-webkit-input-placeholder{
+input::-webkit-input-placeholder{
 	color: white;
 	opacity: 0.5;
+}
+
+marquee{
+	position: relative;
+	top: 100%;
+	width: 100%;
+}
+
+marquee a{
+	color: #F2F1F5;
+}
+
+.footer{
+	margin-top: 25px;
+	height: 95px;
+}
+
+textarea{
+	background-color: rgba(30,30,30,0.25);
+	border: inset transparent 2px;
+	border-radius: 20px;
+	width: 100%;
+	resize: none; 
+	height: 90px;
+	max-height: 90px;
+	padding: 10px;
+	color: #F2F1F5;
+	font-family: type;
+	font-size: 10pt;
+	transition: border-color 0.2s;
+}
+
+textarea:focus{
+	border-color: rgba(255,255,255, 0.25);
+	outline: none;
 }

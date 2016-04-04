@@ -10,33 +10,53 @@
 	<div class="main">
 	<div class="background"></div>
 		<div class="menu">
-			<input type="text" placeholder="Search..." id="search" onkeydown="search(event, this.value)"><br><br><br>
-			<ul>
-				<li>FORUMS</li>
-				<li><a href="https://www.reddit.com/">reddit</a></li>
-				<li><a href="https://shazoo.ru/">shazoo</a></li>
-			</ul>
-			<ul>
-				<li>SOCIAL</li>
-				<li><a href="https://vk.com/">vk</a></li>
-				<li><a href="https://twitter.com/">twitter</a></li>
-			</ul>
-			<ul>
-				<li>GAMES</li>
-				<li><a href="https://osu.ppy.sh/">osu!</a></li>
-				<li><a href="https://twitch.tv/">twitch</a></li>
-			</ul>
-			<ul>
-				<li>EDUCATION</li>
-				<li><a href="https://github.com/">github</a></li>
-				<li><a href="https://learn.javascript.ru/">js</a></li>
-			</ul>
-			
+			<div class="header">
+				<p id="welcome">
+					Welcome home,<br><b style="font-size: 1.25em">Mustard</b>
+				</p>
+				<p id="clock"><br><br><br></p>
+			</div>
+			<div class="bookmarks">
+				<ul>
+					<li>FORUMS</li>
+					<li><a href="https://www.reddit.com/">reddit</a></li>
+					<li><a href="https://shazoo.ru/">shazoo</a></li>
+					<li><a href="https://learn.javascript.ru/">/news/</a></li>
+				</ul>
+				<ul>
+					<li>SOCIAL</li>
+					<li><a href="https://vk.com/">vk</a></li>
+					<li><a href="https://twitter.com/">twitter</a></li>
+					<li><a href="https://learn.javascript.ru/">youtube</a></li>
+				</ul>
+				<ul>
+					<li>GAMES</li>
+					<li><a href="https://osu.ppy.sh/">osu!</a></li>
+					<li><a href="https://twitch.tv/">twitch</a></li>
+					<li><a href="https://learn.javascript.ru/">steam</a></li>
+				</ul>
+				<ul>
+					<li>EDUCATION</li>
+					<li><a href="https://github.com/">github</a></li>
+					<li><a href="https://learn.javascript.ru/">js</a></li>
+					<li><a href="https://learn.javascript.ru/">wiki</a></li>
+				</ul>
+			</div>
+			<div class="footer">
+				<span style="color:white; font-family: type; font-weight: bold">~ : </span><input type="text" placeholder="Google search..." id="search" onkeydown="search(event, this.value	)">
+				<br>
+				<!--
+				<div>
+				<marquee>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>	
+					<a href="#"></a>
+				</marquee>
+				</div>-->
+			</div>
 		</div>
 		<img id='image' src="">
-		<div class="block">
-			<p id="clock">00:00:00</p>
-		</div>
 	</div>
 </body>
 </html>
