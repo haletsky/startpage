@@ -132,7 +132,7 @@ input{
 input:focus{
 	outline: none;
 	width: 60%;
-	border-color: #F2F1F5;
+
 }
 
 input::-webkit-input-placeholder{
@@ -140,14 +140,41 @@ input::-webkit-input-placeholder{
 	opacity: 0.5;
 }
 
-marquee{
+.newsblock{
 	position: absolute;
 	bottom: 20px;
+}
+
+#newsStatus{
+	color: white;
+	opacity: 0.5;
+	margin-bottom: 5px;
+}
+
+#newsStatus a{
+	color:white;
+	text-decoration: none;
+}
+
+#newsStatus a:hover{
+	text-decoration: underline;
+}
+
+marquee{
+	background-color: rgba(30,30,30, 0.25);
+	box-shadow: 0 0 0 2px rgba(255,255,255, 0.25);
+	border-top: solid transparent 2px;
+	border-bottom: solid transparent 2px;
 }
 
 marquee a{
 	color: #F2F1F5;
 	margin-right: 20px;
+	text-decoration: none;
+}
+
+marquee a:hover{
+	text-decoration: underline;
 }
 
 .footer{

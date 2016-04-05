@@ -12,9 +12,11 @@ function initial(){
 	q.style.top = window.innerHeight/2 - q.offsetHeight/2 + "px";
 
 	//Settings for rss
-	createRSS();
+	try{ createRSS(); } catch(e) { document.getElementById('newsStatus').innerHTML = 'Fail to connect.' }
 
 	updateTime();
+
+	document.getElementById('search').focus();
 
 	setInterval(updateTime, 1000);
 
@@ -30,7 +32,21 @@ function initial(){
 }
 
 function search(event, value){
-	if (event.keyCode == 13){ window.location.replace('http://www.google.com/#q=' + value); }
+	var service = value.substr(0, 2);
+	var string = value.substr(3);
+
+	if (event.keyCode == 13){
+		if(service === "-g")
+			window.location.replace('http://www.google.com/#q=' + string);
+		else if(service === "-y")
+			window.location.replace('https://yandex.ua/search/?text=' + string);
+		else if(service === "-d"){
+			window.location.replace('https://duckduckgo.com/?q=' + string)
+		}
+		else{
+			window.location.replace('http://www.google.com/#q=' + value);
+		}
+	}
 }
 
 function createRSS(){
@@ -49,7 +65,7 @@ function createRSS(){
     	marquee.setAttribute('onmouseover', 'this.stop()');
     	marquee.setAttribute('onmouseout', 'this.start()');
 		marquee.style.width = document.getElementsByClassName('bookmarks').item(0).offsetWidth + 'px';
-    	document.getElementsByClassName('footer').item(0).appendChild(marquee);
+    	document.getElementsByClassName('newsblock').item(0).appendChild(marquee);
 	});	
 }
 
