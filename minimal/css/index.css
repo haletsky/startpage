@@ -1,0 +1,168 @@
+@font-face {
+    font-family: type;
+    src: url('../font/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: type;
+    src: url('../font/NotoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+.main{
+	border: solid rgba(255,255,255, 0.25) 2px;
+	display: inline-block;
+	position: relative;
+	box-shadow: 0 0 0 5px rgba(10,10,10,0.25);
+	margin: auto;
+	height: 400px;
+}
+
+.background{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width:100%;
+	height: 100%;
+	background-color: inherit;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+body{
+	background-color: black;
+	font-family: type;
+	font-size: 10pt;
+	margin: 0;
+	padding: 0;
+}
+
+.main img{
+	height: 400px;
+	width:349px;
+	float:right;
+}
+
+.menu{
+	padding: 25px;
+	min-width: 300px;
+	display: inline-block;
+}
+
+ul{
+	display: inline-block;
+	padding: 0 20px;
+	list-style-type: none;
+	margin: 0;
+}
+
+ul:first-child{
+	padding-left: 0;
+}
+
+ul:last-child{
+	padding-right: 0;
+}
+
+ul li:first-child{
+	color: white;
+	opacity: 0.5;
+	font-weight: bold;
+}
+
+ul li{
+	margin-bottom: 5px;
+}
+
+ul li a{
+	display: block;
+	width: 100%;
+	color: rgba(255,255,255, 0.85);
+	text-decoration: none;
+	padding: 5px;
+	transition: 0.2s;
+}
+
+ ul li:hover a{
+	box-shadow: -2px 0 0 rgba(255,255,255, 0.25);
+	background-color: rgba(10,10,10, 0.25);
+}
+
+.header{
+	height: 70px;
+}
+
+#clock{
+	float: right;
+	display: inline-block;
+	color: white;
+	opacity: 0.5;
+	margin: 0;
+}
+
+#welcome{
+	float: left;
+	display: inline-block;
+	color: white;
+	opacity: 0.5;
+	margin: 0;
+}
+
+input{
+	background-color: transparent;
+	border: 0;
+	font-size: 10pt;
+	color: rgba(255,255,255, 0.85);
+	font-family: inherit;
+	transition: 0.2s;
+}
+
+input:focus{
+	outline: none;
+}
+
+input::-webkit-input-placeholder{
+	color: white;
+	opacity: 0.5;
+}
+
+.newsblock{
+	position: absolute;
+	bottom: 21px;
+}
+
+#newsStatus{
+	color: white;
+	opacity: 0.5;
+	margin-bottom: 5px;
+}
+
+#newsStatus a{
+	color: white;
+	text-decoration: none;
+}
+
+#newsStatus a:hover{
+	text-decoration: underline;
+}
+
+marquee{
+	background-color: rgba(10,10,10, 0.25);
+	box-shadow: 0 -2px 0 rgba(255,255,255, 0.25);
+	border-top: solid transparent 2px;
+	border-bottom: solid transparent 2px;
+}
+
+marquee a{
+	color: rgba(255,255,255, 0.85);
+	text-decoration: none;
+}
+
+marquee a:hover{
+	text-decoration: underline;
+}
+
+.footer{
+	margin-top: 25px;
+}
