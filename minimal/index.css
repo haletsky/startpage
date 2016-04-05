@@ -132,7 +132,6 @@ input{
 input:focus{
 	outline: none;
 	width: 60%;
-
 }
 
 input::-webkit-input-placeholder{
