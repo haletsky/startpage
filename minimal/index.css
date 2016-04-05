@@ -141,13 +141,13 @@ input::-webkit-input-placeholder{
 }
 
 marquee{
-	position: relative;
-	top: 100%;
-	width: 100%;
+	position: absolute;
+	bottom: 20px;
 }
 
 marquee a{
 	color: #F2F1F5;
+	margin-right: 20px;
 }
 
 .footer{
