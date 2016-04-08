@@ -1,14 +1,17 @@
-# Startpages
+# Startpages#
 Startpage for your browser.
 Every page have list of bookmarks, clocks, search input and sometimes additional information (weather, short news etc.)
 
-###Blured
+###Blured###
 I used jQuery and plugin [simplyWheter](http://simpleweatherjs.com/) for weather block.
 
-###Minimal
+###Minimal###
 In this project i want to avoid any frameworks. I used pure JavaScript, HTML5/CSS3 for maximum performance and less size.
 Also this startpage have improve search input. (Hover mouse on tilda near input for tooltip.)
 You can specify where you want to search. Before you enter search request, you should write flag where you want to search. (-g' - Google, '-y' - Youtube, '-w' - Wikipedia, '-d' - DuckDuckGo)
+
+**How to add new image?**:
+Place image to `/images` folder. Size should be - w349px:h400px. Rename the image by background #hex-color, save in jpg format (ex. `F83A92.jpg`). and put this background color to array in `/js/index.js` file on 5 line.
 
 # Install (new tab)
 ###Chrome
