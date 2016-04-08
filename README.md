@@ -7,8 +7,10 @@ I used jQuery and plugin [simplyWheter](http://simpleweatherjs.com/) for weather
 
 ###Minimal
 In this project i want to avoid any frameworks. I used pure JavaScript, HTML5/CSS3 for maximum performance and less size.
+Also this startpage have improve search input. (Hover mouse on tilda near input for tooltip.)
+You can specify where you want to search. Before you enter search request, you should write flag where you want to search. (-g' - Google, '-y' - Youtube, '-w' - Wikipedia, '-d' - DuckDuckGo)
 
-# Install
+# Install (new tab)
 ###Chrome
 Chrome doesn't support custom new tab pages, so you'll need to use an extension. New Tab Redirect by Jim Schubert is the most common.
 https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna?hl=en

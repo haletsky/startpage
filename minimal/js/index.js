@@ -4,7 +4,7 @@ function initial(){
 	//Set template design
 	var templates = ['243496', 'C34447', '4F8365', '5D6299',
 					 'ba9a6b', '739889', '353025', '453E3E',
-					 '581F26', '864748'],
+					 '581F26', '864748', 'A07A8C'],
 		id = Math.floor(Math.random() * templates.length);
 	q.style.backgroundColor = "#" + templates[id];
 	document.getElementById('image').src = 'image/' + templates[id] + '.jpg';
@@ -63,12 +63,11 @@ function createRSS(){
    			link.innerHTML = data.feed.entries[i].title;
 			marquee.appendChild(link);
     	}
+    	marquee.setAttribute('onmouseover', 'this.stop()');
+    	marquee.setAttribute('onmouseout', 'this.start()');
+		marquee.style.width = document.getElementsByClassName('bookmarks').item(0).offsetWidth + 'px';
+    	document.getElementsByClassName('newsblock').item(0).appendChild(marquee);
 	});	
-
-	marquee.setAttribute('onmouseover', 'this.stop()');
-    marquee.setAttribute('onmouseout', 'this.start()');
-	marquee.style.width = document.getElementsByClassName('bookmarks').item(0).offsetWidth + 'px';
-    document.getElementsByClassName('newsblock').item(0).appendChild(marquee);
 }
 
 function updateTime(){
