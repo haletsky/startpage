@@ -19,46 +19,56 @@ function initial(){
 	document.getElementById('search').focus();
 
 	setInterval(updateTime, 1000);
-
-
 }
 
 function search(event, value){
+	if(event.keyCode != 13) return;
+
 	var service = value.substr(0, 2);
 	var string = value.substr(3);
 
-	if (event.keyCode == 13){
-		if(service === "-g")
-			window.location.replace('http://www.google.com/#q=' + string);
-		else if(service === "-y")
-			window.location.replace('https://yandex.ua/search/?text=' + string);
-		else if(service === "-d"){
-			window.location.replace('https://duckduckgo.com/?q=' + string)
-		}
-		else{
-			window.location.replace('http://www.google.com/#q=' + value);
-		}
+	switch(service){
+		case '-g':
+			service = 'http://www.google.com/#q=';
+			break;
+
+		case '-y':
+			service = 'https://www.youtube.com/results?search_query=';
+			break;
+
+		case '-w':
+			service = 'https://en.wikipedia.org/wiki/Special:Search?search=';
+			break;
+
+		case '-d':
+			service = 'https://duckduckgo.com/?q=';
+			break;
+
+		default:
+			service = 'http://www.google.com/#q=';
+			string = value;
 	}
+
+	window.location.replace(service + string);
 }
 
 function createRSS(){
-	var feed = new google.feeds.Feed('https://www.reddit.com/r/news/.rss');
+	var feed = new google.feeds.Feed('https://www.reddit.com/r/news/.rss'),
+		marquee = document.createElement('marquee');
 
 	feed.load(function (data) {
-		var marquee = document.createElement('marquee');
-
    		for(var i = 0; i < data.feed.entries.length; i++){
     		var link = document.createElement("a");
    			link.href = data.feed.entries[i].link;
    			link.innerHTML = data.feed.entries[i].title;
 			marquee.appendChild(link);
     	}
-
-    	marquee.setAttribute('onmouseover', 'this.stop()');
-    	marquee.setAttribute('onmouseout', 'this.start()');
-		marquee.style.width = document.getElementsByClassName('bookmarks').item(0).offsetWidth + 'px';
-    	document.getElementsByClassName('newsblock').item(0).appendChild(marquee);
 	});	
+
+	marquee.setAttribute('onmouseover', 'this.stop()');
+    marquee.setAttribute('onmouseout', 'this.start()');
+	marquee.style.width = document.getElementsByClassName('bookmarks').item(0).offsetWidth + 'px';
+    document.getElementsByClassName('newsblock').item(0).appendChild(marquee);
 }
 
 function updateTime(){
