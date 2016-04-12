@@ -31,16 +31,17 @@
 }
 
 body{
+	opacity: 0;
 	background-color: black;
 	font-family: type;
 	font-size: 10pt;
 	margin: 0;
 	padding: 0;
+
 }
 
 .main img{
 	height: 400px;
-	width:349px;
 	float:right;
 }
 

@@ -2,14 +2,12 @@ function initial(){
 	var q = document.getElementsByClassName('main').item(0);
 	
 	//Set template design
-	var templates = ['243496', 'C34447', '4F8365', '5D6299',
-					 'ba9a6b', '739889', '353025', '453E3E',
-					 '581F26', '864748', 'A07A8C'],
+	var templates = ['1E2430', '332620', '031809', '165284', '123356'],
 		id = Math.floor(Math.random() * templates.length);
 	q.style.backgroundColor = "#" + templates[id];
 	document.getElementById('image').src = 'image/' + templates[id] + '.jpg';
 
-	reposition();
+	
 
 	//Settings for rss
 	try{ createRSS(); } catch(e) { document.getElementById('newsStatus').innerHTML = 'Fail to connect.' }
@@ -19,6 +17,8 @@ function initial(){
 	document.getElementById('search').focus();
 
 	setInterval(updateTime, 1000);
+	setTimeout(reposition, 10);
+
 }
 
 function search(event, value){
@@ -87,7 +87,7 @@ function updateTime(){
 
 function reposition(){
 	var q = document.getElementsByClassName('main').item(0);
-
+document.body.style.opacity = 1;
 	//Set position mainblock
 	q.style.left = window.innerWidth/2 - q.offsetWidth/2 + "px";
 	q.style.top = window.innerHeight/2 - q.offsetHeight/2 + "px";
