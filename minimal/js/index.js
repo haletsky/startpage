@@ -7,7 +7,10 @@ function initial(){
 	q.style.backgroundColor = "#" + templates[id];
 	document.getElementById('image').src = 'image/' + templates[id] + '.jpg';
 
-	document.getElementById('image').onload = reposition;
+	document.getElementById('image').onload = function(){
+        reposition();
+        document.body.style.opacity = 1;
+    }
 
 	//Settings for rss
 	try{ createRSS(); } catch(e) { document.getElementById('newsStatus').innerHTML = 'Fail to connect.' }
@@ -87,7 +90,7 @@ function updateTime(){
 
 function reposition(){
 	var q = document.getElementsByClassName('main').item(0);
-    document.body.style.opacity = 1;
+   
 	//Set position mainblock
 	q.style.left = window.innerWidth/2 - q.offsetWidth/2 + "px";
 	q.style.top = window.innerHeight/2 - q.offsetHeight/2 + "px";
