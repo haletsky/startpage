@@ -11,7 +11,7 @@ Also this startpage have improve search input. (Hover mouse on tilda near input 
 You can specify where you want to search. Before you enter search request, you should write flag where you want to search. (-g' - Google, '-y' - Youtube, '-w' - Wikipedia, '-d' - DuckDuckGo)
 
 **How to add new image?**:
-Place image to `/images` folder. Size should be - w349px:h400px. Rename the image by background #hex-color, save in jpg format (ex. `F83A92.jpg`). and put this background color to array in `/js/index.js` file on 5 line.
+Place image to `/images` folder. Rename the image by background #hex-color, save in jpg format (example: `F83A92.jpg`). and put this background color to array in `/js/index.js` file on 5 line.
 
 # Install (new tab)
 ###Chrome
