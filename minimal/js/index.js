@@ -13,7 +13,7 @@ function initial(){
     }
 
 	//Settings for rss
-	try{ createRSS(); } catch(e) { document.getElementById('newsStatus').innerHTML = 'Fail to connect.' }
+	setTimeout(function(){try{ createRSS(); } catch(e) { document.getElementById('newsStatus').innerHTML = 'Fail to connect.' }}, 0);
 
 	updateTime();
 
