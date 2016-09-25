@@ -10,16 +10,16 @@
 	<script type="text/javascript" src="js/index.min.js"></script>
 </head>
 <body onload="initial()" onresize="reposition()">
-	<div class="main">
-	<div class="background"></div>
-		<div class="menu">
-			<div class="header">
+	<div id="background"></div>
+	<div id="main">
+		<div id="menu">
+			<div id="header">
 				<p id="welcome">
 					Welcome home,<br><b style="font-size: 1.25em">Username</b>
 				</p>
 				<p id="clock"><br><br><br></p>
 			</div>
-			<div class="bookmarks">
+			<div id="bookmarks">
 				<ul>
 					<li>FORUMS</li>
 					<li><a href="https://www.reddit.com/">reddit</a></li>
@@ -45,10 +45,10 @@
 					<li><a href="https://en.wikipedia.org/wiki/Main_Page">wiki</a></li>
 				</ul>
 			</div>
-			<div class="footer">
+			<div id="footer">
 				<span style="color:white; font-family: type; font-weight: bold" title="-g Google&#10;-y YouTube&#10;-d DuckDuckGo&#10;-w Wiki">~ : </span><input type="text" placeholder=" Search..." id="search" onkeydown="search(event, this.value)">
 				<br>
-				<div class='newsblock'>
+				<div id='newsblock'>
 					<p id="newsStatus">News from <a href="https://reddit.com/r/news/"><b>reddit.com/r/news/</b></a> :</p>
 				</div>
 			</div>
